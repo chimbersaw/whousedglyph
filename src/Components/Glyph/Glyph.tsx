@@ -2,7 +2,6 @@ import { Card } from "react-bootstrap";
 import { GlyphType, TeamType } from "../../types/glyph";
 import CustomLink from "../IconLink/CustomLink/CustomLink";
 import classes from "./Glyph.module.css";
-import { config } from "../../utils/config";
 import IconLink from "../IconLink/IconLink";
 import radiantImage from "../../assets/radiant.png";
 import direImage from "../../assets/dire.png";
@@ -30,7 +29,7 @@ const Glyph = ({ glyph }: PropsType) => {
 		<Card className={classes.card}>
 			<CustomLink href={getHeroLink()}>
 				<Card.Img
-					src={`/${config.BASE_URL}/heroes/hero_${glyph.heroId}.png`}
+					src={`/heroes/hero_${glyph.heroId}.png`}
 					alt={glyph.heroName}
 				/>
 			</CustomLink>

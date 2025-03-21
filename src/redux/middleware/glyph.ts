@@ -30,7 +30,7 @@ export const setGlyphs =
 					setUrlMatchId(matchId);
 				}
 			})
-			.catch((error: AxiosError) => {
+			.catch((_: AxiosError) => {
 				dispatch(glyphActions.clearGlyphs());
 				dispatch(glyphActions.setMatchId({ matchId: null }));
 				dispatch(

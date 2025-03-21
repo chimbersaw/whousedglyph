@@ -1,4 +1,4 @@
-import { createSearchParams, useSearchParams } from "react-router-dom";
+import { createSearchParams, useSearchParams } from "react-router";
 
 export const useUrlMatchId = () => {
 	const [searchParams, setSearchParams] = useSearchParams();

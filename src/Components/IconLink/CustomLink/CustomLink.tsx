@@ -5,7 +5,7 @@ type PropsType = {
     children: ReactNode
 }
 
-const CustomLink = ({href, children}: PropsType) => {
+const CustomLink = ({ href, children }: PropsType) => {
     return (
         <a
             href={href}

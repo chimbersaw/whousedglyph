@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import { glyphActions } from "../../redux/slices/glyph";
 import { useTypedDispatch, useTypedSelector } from "../../redux/store/store";
 import MatchDetails from "../MatchDetails/MatchDetails";

@@ -16,6 +16,6 @@ npm run start
 yarn start
 ```
 
-## Support us
+## Credits
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whousedglyph)
+Original author: [s3rbug](https://github.com/s3rbug/whousedglyph)
