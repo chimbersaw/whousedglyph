@@ -5,3 +5,10 @@
 .input:hover, .input:focus {
   box-shadow: var(--hover-shadow);
 }
+
+.loadingNote {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  max-width: 300px;
+  margin: 0 auto;
+}

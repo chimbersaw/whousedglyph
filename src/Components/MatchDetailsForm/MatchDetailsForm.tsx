@@ -20,7 +20,7 @@ const MatchDetailsForm = () => {
 	const dispatch = useTypedDispatch();
 
 	const onSubmit = (data: FormDataType) => {
-		dispatch(glyphActions.clearGlyphs());		
+		dispatch(glyphActions.clearGlyphs());
 		dispatch(setGlyphs(data.matchId, setUrlMatchId));
 	};
 
@@ -31,24 +31,29 @@ const MatchDetailsForm = () => {
 	}, [urlMatchId, reset]);
 
 	return (
-		<Form onSubmit={handleSubmit(onSubmit)}>
-			<Form.Group className="d-flex gap-2">
-				<Form.Control
-					className={clsx(classes.input, "rounded-pill flex-grow-1")}
-					type="text"
-					placeholder="Enter match id"
-					{...register("matchId", { required: "Enter match id" })}
-				/>
-				<Button
-					className="rounded-pill"
-					variant="primary"
-					type="submit"
-					disabled={isLoading}
-				>
-					Submit
-				</Button>
-			</Form.Group>
-		</Form>
+		<>
+			<Form onSubmit={handleSubmit(onSubmit)}>
+				<Form.Group className="d-flex gap-2">
+					<Form.Control
+						className={clsx(classes.input, "rounded-pill flex-grow-1")}
+						type="text"
+						placeholder="Enter match id"
+						{...register("matchId", { required: "Enter match id" })}
+					/>
+					<Button
+						className="rounded-pill"
+						variant="primary"
+						type="submit"
+						disabled={isLoading}
+					>
+						Submit
+					</Button>
+				</Form.Group>
+			</Form>
+			<div className={clsx(classes.loadingNote, "text-center")}>
+				<small className="text-muted">Parsing new matches may take up to 15 seconds</small>
+			</div>
+		</>
 	);
 };
 export default MatchDetailsForm;
