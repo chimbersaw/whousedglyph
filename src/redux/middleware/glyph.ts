@@ -1,5 +1,5 @@
-import { uiActions } from "./../slices/ui";
-import { glyphActions } from "./../slices/glyph";
+import { uiActions } from "../slices/ui";
+import { glyphActions } from "../slices/glyph";
 import { glyphApi } from "../../api/glyphApi";
 import { AppThunkType } from "../store/store";
 import { AxiosError, HttpStatusCode } from "axios";

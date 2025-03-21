@@ -1,4 +1,4 @@
-import { AlertType, UiStateType } from "./../../types/glyph";
+import { AlertType, UiStateType } from "../../types/glyph";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: UiStateType = {

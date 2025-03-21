@@ -2,7 +2,6 @@ import clsx from "clsx";
 import MatchDetailsForm from "../MatchDetailsForm/MatchDetailsForm";
 import Title from "../Title/Title";
 import classes from "./Header.module.css";
-import { BuyMeCoffee } from "../BuyMeCoffee/BuyMeCoffee";
 
 const Header = () => {
 	return (
@@ -14,9 +13,6 @@ const Header = () => {
 		>
 			<Title />
 			<MatchDetailsForm />
-			<div className={classes.coffee}>
-				<BuyMeCoffee />
-			</div>
 		</div>
 	);
 };

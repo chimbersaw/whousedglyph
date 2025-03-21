@@ -4,7 +4,7 @@ import {
 	GlyphType,
 	TeamType,
 	ServerGlyphType,
-} from "./../../types/glyph";
+} from "../../types/glyph";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: GlyphStateType = {

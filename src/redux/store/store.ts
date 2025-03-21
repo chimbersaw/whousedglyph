@@ -1,4 +1,4 @@
-import { AnyAction, configureStore, ThunkAction } from '@reduxjs/toolkit'
+import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux';
 import { TypedUseSelectorHook, useSelector } from "react-redux";
 import glyphReducer from "../slices/glyph"
@@ -17,7 +17,7 @@ export type AppThunkType<ReturnType = Promise<void>> = ThunkAction<
     ReturnType,
     AppStateType,
     unknown,
-    AnyAction
+    Action
 >
 
 export const useTypedDispatch: () => AppDispatchType = useDispatch
