@@ -3,7 +3,7 @@
   "name": "Who used glyph?",
   "icons": [
     {
-      "src": "glyph.ico",
+      "src": "favicon.ico",
       "sizes": "256x256 128x128 64x64 48x48 40x40 32x32 24x24 20x20 16x16",
       "type": "image/x-icon"
     },
