@@ -30,13 +30,21 @@ export const setGlyphs =
 					setUrlMatchId(matchId);
 				}
 			})
-			.catch((_: AxiosError) => {
+			.catch((error: AxiosError) => {
+				let serverMessage = `Match '${matchId}' is not found`;
+				if (error.response?.data && typeof error.response.data === "object") {
+					const data = error.response.data as { Message?: string };
+					if (data.Message) {
+						serverMessage = data.Message;
+					}
+				}
+
 				dispatch(glyphActions.clearGlyphs());
 				dispatch(glyphActions.setMatchId({ matchId: null }));
 				dispatch(
 					uiActions.setError({
 						error: {
-							message: `Match '${matchId}' is not found`,
+							message: serverMessage,
 							header: "Not found",
 						},
 					})
