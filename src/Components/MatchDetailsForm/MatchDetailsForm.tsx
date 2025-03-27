@@ -51,7 +51,7 @@ const MatchDetailsForm = () => {
 				</Form.Group>
 			</Form>
 			<div className={clsx(classes.loadingNote, "text-center")}>
-				<small className="text-muted">Parsing new matches may take up to 15 seconds</small>
+				<small className="text-muted">Parsing new matches may take up to 30 seconds</small>
 			</div>
 		</>
 	);
