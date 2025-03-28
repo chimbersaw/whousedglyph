@@ -32,7 +32,9 @@ export const setGlyphs =
 			})
 			.catch((error: AxiosError) => {
 				let serverMessage = `Match '${matchId}' is not found`;
-				if (error.response?.data && typeof error.response.data === "object") {
+				if (!error.response || error.response.status === 502) {
+					serverMessage = "Server is not responding :( Please try again later";
+				} else if (error.response.data && typeof error.response.data === "object") {
 					const data = error.response.data as { Message?: string };
 					if (data.Message) {
 						serverMessage = data.Message;
