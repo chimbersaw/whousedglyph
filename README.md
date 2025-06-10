@@ -16,6 +16,14 @@ npm run start
 yarn start
 ```
 
+## Serving in production:
+
+```bash
+yarn build
+yarn global add serve
+serve -s dist -l tcp://127.0.0.1:4173
+```
+
 ## Credits
 
 Original author: [s3rbug](https://github.com/s3rbug/whousedglyph)
